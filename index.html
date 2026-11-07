@@ -3,718 +3,475 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="KORVEXA - Premium leather goods and accessories.">
+<meta name="theme-color" content="#160f0b">
 <title>KORVEXA | Premium Leather Goods</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Discover premium leather wallets, belts, bags, shoes, accessories and gifts at KORVEXA.">
 
 <style>
 :root {
-  --black: #0F0F0F;
-  --dark: #111111;
-  --card: #282828;
-  --orange: #FF6B34;
-  --white: #FFFFFF;
-  --muted: #C2C2C2;
-  --brown: #4A250F;
+  --black:#160F0B;
+  --dark:#21150F;
+  --brown:#3B2418;
+  --card:#302016;
+  --accent:#C1A078;
+  --beige:#E8D8C3;
+  --white:#FFFFFF;
+  --muted:#C8B59F;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* {box-sizing:border-box;margin:0;padding:0}
 
 body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'DM Sans', sans-serif;
+  background-color:var(--black);
+  color:var(--beige);
+  font-family:Arial,sans-serif;
+  background-image:
+    repeating-linear-gradient(95deg,
+    rgba(193,160,120,.035) 0px,
+    transparent 2px,
+    rgba(0,0,0,.08) 4px);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-.announcement {
-  background: var(--orange);
-  color: #111;
-  text-align: center;
-  padding: 10px;
-  font-size: 11px;
-  letter-spacing: 2px;
-}
+a {color:inherit;text-decoration:none}
+button {cursor:pointer;font-family:inherit}
 
 header {
-  background: var(--dark);
-  padding: 20px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #292929;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background:rgba(22,15,11,.97);
+  padding:17px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+  border-bottom:1px solid #60452e;
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  letter-spacing: 5px;
-  font-weight: 700;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--accent);
+  font-size:25px;
+  font-weight:bold;
+  letter-spacing:4px;
 }
 
-.logo span {
-  color: var(--orange);
+.logo-v {
+  font-size:38px;
+  font-family:Georgia,serif;
+  border:1px solid var(--accent);
+  padding:2px 10px;
+  background:linear-gradient(135deg,#67472b,#160f0b);
 }
 
-nav {
-  display: flex;
-  gap: 27px;
-  align-items: center;
-}
-
-nav a {
-  font-size: 12px;
-  color: var(--muted);
-  transition: .3s;
-}
-
-nav a:hover {
-  color: var(--orange);
-}
-
-.button {
-  display: inline-block;
-  background: var(--orange);
-  color: #111;
-  padding: 15px 27px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  border: 1px solid var(--orange);
-  transition: .3s;
-}
-
-.button:hover {
-  background: transparent;
-  color: var(--orange);
-}
+nav {display:flex;gap:22px;align-items:center}
+nav a {font-size:13px;color:var(--beige)}
+nav a:hover {color:var(--accent)}
 
 .hero {
-  min-height: 650px;
+  min-height:490px;
+  padding:100px 8%;
+  display:flex;
+  align-items:center;
   background:
-    linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.25)),
-    url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1800&q=85') center/cover;
-  display: flex;
-  align-items: center;
-  padding: 80px 9%;
+  linear-gradient(90deg,rgba(22,15,11,.96),rgba(22,15,11,.52)),
+  url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1800&q=85') center/cover;
 }
 
-.hero-content {
-  max-width: 600px;
-}
-
-.small-title {
-  color: var(--orange);
-  font-size: 11px;
-  letter-spacing: 4px;
-  margin-bottom: 22px;
-}
-
+.hero-content {max-width:650px}
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(45px, 7vw, 76px);
-  line-height: 1.1;
-  margin-bottom: 24px;
+  font-family:Georgia,serif;
+  font-size:clamp(42px,7vw,76px);
+  color:var(--accent);
+  margin-bottom:20px;
+}
+.hero p {line-height:1.9;color:var(--beige);margin-bottom:25px}
+
+.btn {
+  display:inline-block;
+  padding:14px 25px;
+  background:linear-gradient(135deg,#D1B48C,#A77E50);
+  color:#160F0B;
+  font-weight:bold;
+  border:0;
+  border-radius:3px;
 }
 
-.hero p {
-  color: #D0D0D0;
-  line-height: 1.9;
-  font-size: 14px;
-  max-width: 460px;
-  margin-bottom: 30px;
+.section {padding:65px 6%}
+.section-title {
+  font-family:Georgia,serif;
+  font-size:35px;
+  color:var(--accent);
+  text-align:center;
+  margin-bottom:12px;
 }
-
-.section {
-  padding: 85px 7%;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-heading h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 5vw, 46px);
-  margin-bottom: 12px;
-}
-
-.section-heading p {
-  color: var(--muted);
-  font-size: 13px;
+.subtitle {
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:35px;
 }
 
 .categories {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
 }
 
 .category {
-  height: 330px;
-  position: relative;
-  overflow: hidden;
-  background: var(--card);
+  background:var(--brown);
+  padding:30px 15px;
+  text-align:center;
+  border:1px solid #725137;
+  cursor:pointer;
+  transition:.3s;
+}
+.category:hover {
+  background:#503522;
+  transform:translateY(-4px);
+}
+.category h3 {color:var(--accent);margin-top:10px}
+.category span {font-size:30px}
+
+.toolbar {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
 }
 
-.category img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: .5s;
-}
-
-.category:hover img {
-  transform: scale(1.08);
-}
-
-.category-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 35px 20px 20px;
-  background: linear-gradient(transparent, rgba(0,0,0,.95));
-}
-
-.category-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;
-}
-
-.category-info p {
-  color: var(--orange);
-  font-size: 10px;
-  letter-spacing: 2px;
-  margin-top: 8px;
-}
-
-.bestsellers {
-  background: var(--dark);
+.toolbar input,.toolbar select {
+  padding:13px;
+  background:var(--dark);
+  color:var(--beige);
+  border:1px solid #795438;
+  border-radius:3px;
 }
 
 .products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:20px;
 }
 
 .product {
-  background: var(--card);
-  padding-bottom: 22px;
-  transition: .3s;
+  background:var(--card);
+  border:1px solid #59402d;
+  overflow:hidden;
+  transition:.3s;
 }
-
-.product:hover {
-  transform: translateY(-5px);
-}
+.product:hover {transform:translateY(-5px)}
 
 .product img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  display:block;
+  background:#24170f;
 }
 
-.product-info {
-  padding: 20px;
+.product-info {padding:16px}
+.product h3 {font-size:16px;color:var(--beige);margin-bottom:9px}
+.price {color:var(--accent);font-weight:bold;margin-bottom:14px}
+.enquire {
+  width:100%;
+  padding:12px;
+  background:#C1A078;
+  color:#160F0B;
+  border:0;
+  font-weight:bold;
+  border-radius:3px;
+}
+.enquire:hover {background:#E8D8C3}
+
+#about {
+  background:linear-gradient(120deg,#21150F,#3B2418);
+  text-align:center;
+  border-top:1px solid #725137;
+  border-bottom:1px solid #725137;
+}
+.about-text {
+  max-width:750px;
+  margin:20px auto;
+  line-height:2;
+  color:var(--muted);
 }
 
-.product h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 23px;
-  margin-bottom: 9px;
+.socials {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:30px;
 }
-
-.product p {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.7;
+.socials a {
+  border:1px solid var(--accent);
+  color:var(--accent);
+  padding:13px 23px;
+  border-radius:3px;
 }
-
-.product a {
-  display: inline-block;
-  color: var(--orange);
-  margin-top: 17px;
-  font-size: 11px;
-  letter-spacing: 1px;
-  border-bottom: 1px solid var(--orange);
-  padding-bottom: 5px;
-}
-
-.feature {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: center;
-  background: var(--black);
-}
-
-.feature img {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-}
-
-.feature h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 43px;
-  margin-bottom: 20px;
-}
-
-.feature p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.9;
-  margin-bottom: 27px;
-}
-
-.reviews {
-  background: var(--dark);
-}
-
-.review-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.review {
-  background: var(--card);
-  padding: 30px;
-  border-bottom: 2px solid var(--orange);
-}
-
-.stars {
-  color: var(--orange);
-  letter-spacing: 4px;
-  margin-bottom: 18px;
-}
-
-.review p {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.review h4 {
-  margin-top: 20px;
-  font-size: 13px;
-}
-
-.contact {
-  text-align: center;
-  background: #181818;
-  padding: 90px 7%;
-}
-
-.contact h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 43px;
-  margin: 15px 0;
-}
-
-.contact p {
-  color: var(--muted);
-  margin-bottom: 30px;
-  line-height: 1.8;
+.socials a:hover {
+  background:var(--accent);
+  color:var(--black);
 }
 
 footer {
-  background: #080808;
-  padding: 55px 7% 25px;
+  background:#100B08;
+  padding:35px 6%;
+  text-align:center;
+}
+footer p {color:var(--muted);font-size:13px;margin-top:12px}
+
+.whatsapp-float {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 20px;
+  border-radius:40px;
+  font-weight:bold;
+  z-index:200;
+  box-shadow:0 3px 15px #0008;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
+@media(max-width:900px) {
+  .products {grid-template-columns:repeat(3,1fr)}
 }
-
-footer h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 17px;
-}
-
-footer p, footer a {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 2.2;
-  display: block;
-}
-
-footer a:hover {
-  color: var(--orange);
-}
-
-.copyright {
-  text-align: center;
-  border-top: 1px solid #292929;
-  padding-top: 23px;
-  color: #888;
-  font-size: 11px;
-}
-
-.whatsapp {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 200;
-  background: #246B45;
-  color: white;
-  padding: 15px 22px;
-  border-radius: 30px;
-  font-size: 12px;
-  box-shadow: 0 4px 20px #0008;
-}
-
-@media(max-width: 800px) {
-  header {
-    padding: 18px 5%;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  nav {
-    gap: 13px;
-    flex-wrap: wrap;
-  }
-
-  nav a {
-    font-size: 10px;
-  }
-
-  .categories {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .feature {
-    grid-template-columns: 1fr;
-  }
-
-  .review-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media(max-width: 500px) {
-  .logo {
-    font-size: 23px;
-  }
-
-  nav {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .hero {
-    min-height: 520px;
-  }
-
-  .categories {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .category {
-    height: 230px;
-  }
-
-  .products {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 60px 5%;
-  }
+@media(max-width:600px) {
+  header {padding:13px 4%;flex-wrap:wrap;gap:12px}
+  .logo {font-size:20px}
+  nav {gap:12px;flex-wrap:wrap}
+  nav a {font-size:11px}
+  .hero {min-height:400px;padding:65px 6%}
+  .categories {grid-template-columns:repeat(2,1fr)}
+  .products {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .product img {height:145px}
+  .product-info {padding:10px}
+  .product h3 {font-size:13px}
+  .section {padding:45px 4%}
+  .section-title {font-size:28px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="announcement">
-  DISCOVER THE KORVEXA COLLECTION
-</div>
-
 <header>
-  <a href="#home" class="logo">KORVEXA<span>.</span></a>
-
+  <a class="logo" href="#">
+    <span class="logo-v">V</span>
+    KORVEXA
+  </a>
   <nav>
-    <a href="#home">HOME</a>
-    <a href="#collections">COLLECTIONS</a>
-    <a href="#bestsellers">BEST SELLERS</a>
-    <a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
+    <a href="#">Home</a>
+    <a href="#collections">Collections</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero" id="home">
+<section class="hero">
   <div class="hero-content">
-    <div class="small-title">THE ART OF PREMIUM LEATHER</div>
-    <h1>Style That<br>Lasts Forever.</h1>
-    <p>
-      Discover premium leather essentials designed
-      for modern living. Timeless style, thoughtful
-      details and quality that speaks for itself.
-    </p>
-    <a href="#collections" class="button">EXPLORE COLLECTION</a>
+    <h1>KORVEXA</h1>
+    <p>TIMELESS STYLE. PREMIUM CRAFTSMANSHIP.</p>
+    <p>Discover a refined collection of premium leather goods, designed for everyday elegance and timeless style.</p>
+    <a href="#collections" class="btn">EXPLORE COLLECTION</a>
   </div>
 </section>
 
 <section class="section" id="collections">
-  <div class="section-heading">
-    <div class="small-title">EXPLORE KORVEXA</div>
-    <h2>Our Collections</h2>
-    <p>Discover products made for your everyday lifestyle.</p>
+  <h2 class="section-title">Our Collections</h2>
+  <p class="subtitle">Explore our premium product collections</p>
+
+  <div class="categories" id="categories"></div>
+
+  <br><br>
+
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search products..." oninput="renderProducts()">
+    <select id="filter" onchange="renderProducts()">
+      <option value="all">All Categories</option>
+      <option value="Wallets">Wallets</option>
+      <option value="Belts">Belts</option>
+      <option value="Bags">Bags</option>
+      <option value="Shoes">Shoes</option>
+      <option value="Accessories">Accessories</option>
+      <option value="Gifts">Gifts</option>
+    </select>
   </div>
 
-  <div class="categories">
+  <h2 class="section-title" id="product-heading">All Products</h2>
+  <p class="subtitle">Select your favourite product and enquire directly on WhatsApp.</p>
 
-    <a href="#bestsellers" class="category">
-      <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=700&q=85" alt="Leather wallets">
-      <div class="category-info">
-        <h3>Wallets</h3>
-        <p>EVERYDAY ESSENTIALS</p>
-      </div>
-    </a>
-
-    <a href="#bestsellers" class="category">
-      <img src="https://images.unsplash.com/photo-1624222247344-550fb8c9c9e7?auto=format&fit=crop&w=700&q=85" alt="Leather bags">
-      <div class="category-info">
-        <h3>Bags</h3>
-        <p>TRAVEL IN STYLE</p>
-      </div>
-    </a>
-
-    <a href="#bestsellers" class="category">
-      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85" alt="Accessories">
-      <div class="category-info">
-        <h3>Accessories</h3>
-        <p>DETAILS THAT MATTER</p>
-      </div>
-    </a>
-
-    <a href="#bestsellers" class="category">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85" alt="Shoes">
-      <div class="category-info">
-        <h3>Shoes</h3>
-        <p>STEP INTO STYLE</p>
-      </div>
-    </a>
-
-  </div>
+  <div class="products" id="product-list"></div>
 </section>
 
-<section class="section bestsellers" id="bestsellers">
-  <div class="section-heading">
-    <div class="small-title">HANDPICKED FOR YOU</div>
-    <h2>Best Sellers</h2>
-    <p>Explore our featured leather collection.</p>
-  </div>
-
-  <div class="products">
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=85" alt="Classic wallet">
-      <div class="product-info">
-        <h3>Classic Wallet</h3>
-        <p>Elegant everyday leather essentials.</p>
-        <a href="#" onclick="orderProduct('Classic Wallet');return false;">ENQUIRE NOW →</a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1624222247344-550fb8c9c9e7?auto=format&fit=crop&w=800&q=85" alt="Premium bag">
-      <div class="product-info">
-        <h3>Premium Bags</h3>
-        <p>Designed for everyday journeys.</p>
-        <a href="#" onclick="orderProduct('Premium Bags');return false;">ENQUIRE NOW →</a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=85" alt="Shoes">
-      <div class="product-info">
-        <h3>Modern Shoes</h3>
-        <p>Contemporary footwear collection.</p>
-        <a href="#" onclick="orderProduct('Modern Shoes');return false;">ENQUIRE NOW →</a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=85" alt="Laptop bags">
-      <div class="product-info">
-        <h3>Laptop Bags</h3>
-        <p>Professional style for modern work.</p>
-        <a href="#" onclick="orderProduct('Laptop Bags');return false;">ENQUIRE NOW →</a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=85" alt="Leather gifts">
-      <div class="product-info">
-        <h3>Gift Collection</h3>
-        <p>Thoughtful gifts for special moments.</p>
-        <a href="#" onclick="orderProduct('Gift Collection');return false;">ENQUIRE NOW →</a>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=85" alt="Premium accessories">
-      <div class="product-info">
-        <h3>Leather Accessories</h3>
-        <p>Complete your everyday collection.</p>
-        <a href="#" onclick="orderProduct('Leather Accessories');return false;">ENQUIRE NOW →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section feature" id="about">
-  <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1000&q=85" alt="Premium design">
-
-  <div>
-    <div class="small-title">THE KORVEXA STORY</div>
-    <h2>Quality Is Our Identity.</h2>
-    <p>
-      At KORVEXA, we believe that great accessories
-      are more than everyday essentials. They reflect
-      your personality and accompany your journey.
-
-      Our focus is on thoughtful design, quality
-      materials and timeless style.
-    </p>
-    <a href="#contact" class="button">DISCOVER MORE</a>
-  </div>
-</section>
-
-<section class="section reviews">
-  <div class="section-heading">
-    <div class="small-title">CUSTOMER EXPERIENCE</div>
-    <h2>What Makes Us Different</h2>
-    <p>Our commitment to quality and service.</p>
-  </div>
-
-  <div class="review-grid">
-
-    <div class="review">
-      <div class="stars">★★★★★</div>
-      <p>We believe every customer deserves quality products and thoughtful service.</p>
-      <h4>QUALITY FIRST</h4>
-    </div>
-
-    <div class="review">
-      <div class="stars">★★★★★</div>
-      <p>Discover carefully selected styles for everyday use and special occasions.</p>
-      <h4>TIMELESS STYLE</h4>
-    </div>
-
-    <div class="review">
-      <div class="stars">★★★★★</div>
-      <p>Our team is here to help you find the right product for your needs.</p>
-      <h4>PERSONAL SUPPORT</h4>
-    </div>
-
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="small-title">GET IN TOUCH</div>
-  <h2>Discover Your Style.</h2>
-  <p>
-    Interested in our collection?<br>
-    Contact KORVEXA for product details and enquiries.
+<section class="section" id="about">
+  <h2 class="section-title">About KORVEXA</h2>
+  <p class="about-text">
+    KORVEXA brings together timeless design, premium leather aesthetics
+    and everyday functionality. Discover carefully selected wallets,
+    belts, bags, shoes, accessories and gifts.
+    Our goal is to make quality and elegance part of your everyday life.
   </p>
-  <a href="#" class="button" onclick="orderProduct('General Enquiry');return false;">
-    CONTACT US ON WHATSAPP
+
+  <h3 style="color:#C1A078;margin-top:35px">FOLLOW KORVEXA</h3>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/korvexa_leather.in/"
+       target="_blank" rel="noopener">Instagram</a>
+
+    <a href="https://www.facebook.com/"
+       target="_blank" rel="noopener">Facebook</a>
+
+    <a href="https://www.pinterest.com/"
+       target="_blank" rel="noopener">Pinterest</a>
+  </div>
+</section>
+
+<section class="section" id="contact" style="text-align:center">
+  <h2 class="section-title">Contact Us</h2>
+  <p class="subtitle">Have a question? Connect with our team.</p>
+  <a class="btn" href="https://wa.me/919611347381?text=Hello%20KORVEXA%2C%20I%20want%20to%20know%20more%20about%20your%20products." target="_blank">
+    WhatsApp Business
   </a>
 </section>
 
 <footer>
-  <div class="footer-grid">
-
-    <div>
-      <div class="logo">KORVEXA<span>.</span></div>
-      <p>Premium leather goods and everyday essentials.</p>
-    </div>
-
-    <div>
-      <h3>Quick Links</h3>
-      <a href="#home">Home</a>
-      <a href="#collections">Collections</a>
-      <a href="#bestsellers">Best Sellers</a>
-      <a href="#about">About Us</a>
-    </div>
-
-    <div>
-      <h3>Connect</h3>
-      <a href="#contact">Contact Us</a>
-      <a href="#" onclick="orderProduct('General Enquiry');return false;">WhatsApp</a>
-    </div>
-
+  <div class="logo" style="justify-content:center">
+    <span class="logo-v">V</span> KORVEXA
   </div>
-
-  <div class="copyright">
-    ©️ 2026 KORVEXA. ALL RIGHTS RESERVED.
-  </div>
+  <p>Premium Leather Goods | Timeless Elegance</p>
+  <p>©️ 2026 KORVEXA. All Rights Reserved.</p>
 </footer>
 
-<a href="#" class="whatsapp"
-   onclick="orderProduct('General Enquiry');return false;">
-   WhatsApp ↗️
-</a>
+<a class="whatsapp-float"
+   href="https://wa.me/919611347381"
+   target="_blank" rel="noopener">WhatsApp</a>
 
 <script>
-/* REPLACE WITH YOUR WHATSAPP BUSINESS NUMBER */
-const whatsappNumber = "919611347381";
+const WHATSAPP_NUMBER = "919611347381";
 
-function orderProduct(product) {
-  if (whatsappNumber === "919611347381") {
-    alert("Please add your WhatsApp Business number in the website code first.");
-    return;
+const categoryData = [
+  {name:"Wallets",icon:"👛",price:799,
+   image:"photo-1627123424574-724758594e93"},
+  {name:"Belts",icon:"🟤",price:999,
+   image:"photo-1624222247344-550fb8f7a5c5"},
+  {name:"Bags",icon:"👜",price:1999,
+   image:"photo-1553062407-98eeb64c6a62"},
+  {name:"Shoes",icon:"👞",price:2499,
+   image:"photo-1542291026-7eec264c27ff"},
+  {name:"Accessories",icon:"🎁",price:499,
+   image:"photo-1523275335684-37898b6baf30"},
+  {name:"Gifts",icon:"🎀",price:999,
+   image:"photo-1549465220-1a8b9238cd48"}
+];
+
+const products = [];
+
+const styles = [
+ "Classic","Premium","Luxury","Executive","Modern",
+ "Vintage","Minimal","Elegant","Signature","Heritage",
+ "Urban","Essential","Designer","Royal","Slim",
+ "Travel","Everyday","Timeless","Exclusive","Elite"
+];
+
+categoryData.forEach(category => {
+  for(let i=0;i<20;i++) {
+    products.push({
+      id:category.name.toLowerCase()+i,
+      category:category.name,
+      name:styles[i]+" "+category.name.slice(0,-1)+" "+(i+1),
+      price:category.price+(i*100),
+      image:category.image
+    });
   }
+});
 
-  const message = encodeURIComponent(
-    "Hello KORVEXA! I am interested in: " + product
-  );
+const categoriesElement = document.getElementById("categories");
+
+categoryData.forEach(category => {
+  const div=document.createElement("div");
+  div.className="category";
+  div.innerHTML=`
+    <span>${category.icon}</span>
+    <h3>${category.name}</h3>
+    <p style="color:#C8B59F;margin-top:8px">20 Products</p>
+  `;
+  div.onclick=()=>{
+    document.getElementById("filter").value=category.name;
+    renderProducts();
+    document.getElementById("product-heading").scrollIntoView({behavior:"smooth"});
+  };
+  categoriesElement.appendChild(div);
+});
+
+function enquire(product) {
+  const message=
+    "Hello KORVEXA! I am interested in this product:%0A%0A"+
+    "Product: "+encodeURIComponent(product.name)+"%0A"+
+    "Category: "+encodeURIComponent(product.category)+"%0A"+
+    "Price: ₹"+product.price+"%0A%0A"+
+    "Please share more details.";
 
   window.open(
-    "https://wa.me/" + whatsappNumber + "?text=" + message,
+    "https://wa.me/"+WHATSAPP_NUMBER+"?text="+message,
     "_blank"
   );
 }
+
+function renderProducts() {
+  const filter=document.getElementById("filter").value;
+  const search=document.getElementById("search").value.toLowerCase();
+
+  const filtered=products.filter(product=>{
+    return (filter==="all" || product.category===filter) &&
+      (product.name.toLowerCase().includes(search) ||
+       product.category.toLowerCase().includes(search));
+  });
+
+  const container=document.getElementById("product-list");
+  container.innerHTML="";
+
+  if(filtered.length===0) {
+    container.innerHTML="<p>No products found.</p>";
+    return;
+  }
+
+  filtered.forEach(product=>{
+    const card=document.createElement("div");
+    card.className="product";
+
+    const img=document.createElement("img");
+    img.src="https://images.unsplash.com/"+product.image+
+      "?auto=format&fit=crop&w=600&q=80";
+    img.alt=product.name;
+    img.loading="lazy";
+    img.onerror=()=>{img.style.display="none"};
+
+    const info=document.createElement("div");
+    info.className="product-info";
+
+    const title=document.createElement("h3");
+    title.textContent=product.name;
+
+    const price=document.createElement("p");
+    price.className="price";
+    price.textContent="₹"+product.price.toLocaleString("en-IN");
+
+    const button=document.createElement("button");
+    button.className="enquire";
+    button.textContent="ENQUIRE ON WHATSAPP";
+    button.onclick=()=>enquire(product);
+
+    info.append(title,price,button);
+    card.append(img,info);
+    container.appendChild(card);
+  });
+}
+
+renderProducts();
 </script>
 
 </body>
