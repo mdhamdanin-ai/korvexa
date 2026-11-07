@@ -20,9 +20,9 @@ nav a{color:#E8D8C3;text-decoration:none;margin-left:22px;font-size:12px}
 .heading h2{font-family:Georgia,serif;font-size:43px;color:#E8D8C3;margin-top:12px}
 .heading small{color:#C1A078;letter-spacing:4px}
 .categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.category{height:260px;position:relative;overflow:hidden;background:#3B2418}
-.category img{width:100%;height:100%;object-fit:cover;opacity:.7}
-.category h3{position:absolute;bottom:20px;left:20px;font:30px Georgia;color:white}
+.category{display:block;height:260px;position:relative;overflow:hidden;background:#3B2418;border:1px solid rgba(193,160,120,.28)}
+.category img{display:block;width:100%;height:100%;object-fit:cover;opacity:.82;transition:transform .5s,opacity .5s}.category:hover img{transform:scale(1.06);opacity:1}.category:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(15,9,6,.82));pointer-events:none}
+.category h3{position:absolute;z-index:1;bottom:20px;left:20px;font:30px Georgia;color:white;letter-spacing:.5px;text-shadow:0 2px 10px #000}
 .collection{background:#21160F}
 .search{display:block;width:min(600px,100%);margin:0 auto 25px;padding:16px;background:#160F0B;color:white;border:1px solid #C1A078}
 .filters{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:35px}
@@ -138,7 +138,7 @@ Wallets:"https://images.unsplash.com/photo-1627123424574-724758594e93?w=600",
 Belts:"https://images.unsplash.com/photo-1624222247344-550fb8f7c5a8?w=600",
 Bags:"https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600",
 Shoes:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600",
-Accessories:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600",
+Accessories:"https://images.unsplash.com/photo-1622560480654-d96214fdc887?w=600",
 Gifts:"https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=600"
 };
 
@@ -171,7 +171,7 @@ list.forEach(p=>{
 let card=document.createElement("div");
 card.className="product";
 let img=document.createElement("img");
-img.src=images[p.c];img.alt=p.name;img.loading="lazy";
+img.src=images[p.c];img.alt=p.name;img.loading="lazy";img.onerror=()=>{img.onerror=null;img.src="https://placehold.co/700x500/3B2418/E8D8C3?text=KORVEXA";};
 let h=document.createElement("h3");h.textContent=p.name;
 let price=document.createElement("p");price.textContent="Price on request";
 let a=document.createElement("a");
